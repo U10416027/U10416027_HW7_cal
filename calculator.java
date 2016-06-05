@@ -212,6 +212,61 @@ public class calculator extends Application {
 			judge = 4;
 		});
 		
+		// "="  print the result to the textfield(judge whether + - x or /)
+		b23.setOnAction(c -> {
+			double result = Double.parseDouble(output.getText());
+			if(judge == 1){
+				number += result;
+				output.setText(Double.toString(number));
+			}
+			
+			else if(judge == 2){
+				number -= result;
+				output.setText(Double.toString(number));
+			}
+			
+			else if(judge == 3){
+				number *= result;
+				output.setText(Double.toString(number));
+			}
+			
+			else if(judge == 4){
+				number /= result;
+				output.setText(Double.toString(number));
+			}
+		});
+		
+		b10.setOnAction(e -> {
+		  output.setText(output.getText()+"1");
+		});
+		
+		b11.setOnAction(e -> {
+		  output.setText(output.getText()+"2");
+		});
+		
+		b12.setOnAction(e -> {
+		  output.setText(output.getText()+"3");
+		});
+		
+		//加入0的按鈕
+		b13.setOnAction(e -> {
+			
+			//判斷是否運算中(因為要可以運算(+ - x  /) 零點幾 ex: a x 0.123)
+			if (judge == 1 || judge == 2 || judge == 3 || judge == 4){
+				output.setText(output.getText()+"0");
+			}
+			
+			//如果剛開始直接按0 無反應  避免出現0123456  0123..情況
+			else if(Long.parseLong(output.getText())==0){
+				output.setText("");
+			}
+			
+			// Textfield  + "0"
+			else{
+				output.setText(output.getText()+"0");
+			}
+		});
+		
 		b4.setOnAction(e -> {
 			output.setText(output.getText()+"7");
 		});
