@@ -214,6 +214,20 @@ public class calculator extends Application {
 		b15.setOnAction(e -> {
 			output.setText(output.getText()+".");
 		});
+		
+		//function the button C
+		b1.setOnAction(e -> {
+			char[] c = new char[output.getLength()];
+			for(int i = 0;i < output.getLength() - 1;i++){
+				c[i] = output.getText().charAt(i);
+			}
+			output.setText(String.valueOf(c));
+		});
+		
+		//function the button Backspace(Del)
+		b14.setOnAction(e -> {
+			 output.setText(Integer.toString(Integer.parseInt(output.getText())* (-1)));
+		});
 
 		//set the size and the title , show the calculator
 		Scene scene = new Scene(grid, 240, 270);
