@@ -18,13 +18,13 @@ import javafx.scene.control.MenuBar;
 import javafx.scene.control.MenuItem;
 
 public class calculator extends Application {
-  public void start(Stage primaryStage) {
-    // to save the number , and judge +  -  x  or  /
-    private double number;
+	public void start(Stage primaryStage) {
+    		// to save the number , and judge +  -  x  or  /
+    		private double number;
 		private double judge;
 		
 		MenuBar menuBar = new MenuBar();
-        Menu menu = new Menu("編輯");
+        	Menu menu = new Menu("編輯");
 		
 		//set the pane
 		GridPane grid = new GridPane();
@@ -32,7 +32,7 @@ public class calculator extends Application {
 		grid.setVgap(10);
 		grid.setPadding(new Insets(5, 5, 5, 5));
 
-    //TextFields
+		 //TextFields
 		TextField output = new TextField();
 		output.setMinSize(233, 0);
 		GridPane.setConstraints(output, 0, 0);
@@ -64,7 +64,7 @@ public class calculator extends Application {
 		Button b22 = new Button("+");
 		Button b23 = new Button("=");
 	
-	  // add buttons to pane
+	  	// add buttons to pane
 		b1.setMinSize(80, 30);
 		b1.setTranslateX(10);
 		b1.setTranslateY(45);
@@ -182,5 +182,45 @@ public class calculator extends Application {
 		b23.setTranslateY(205);
 		grid.getChildren().add(b23);
 
-  }
+		//create the action listener
+		b4.setOnAction(e -> {
+			output.setText(output.getText()+"7");
+		});
+		
+		b5.setOnAction(e -> {
+			output.setText(output.getText()+"8");
+		});
+		
+		b6.setOnAction(e -> {
+			output.setText(output.getText()+"9");
+		});
+		
+		b7.setOnAction(e -> {
+			output.setText(output.getText()+"4");
+		});
+		
+		b8.setOnAction(e -> {
+			output.setText(output.getText()+"5");
+		});
+		
+		b9.setOnAction(e -> {
+			output.setText(output.getText()+"6");
+		});
+		
+		b3.setOnAction(e -> {
+			output.setText("");
+		});
+		
+		b15.setOnAction(e -> {
+			output.setText(output.getText()+".");
+		});
+
+		//set the size and the title , show the calculator
+		Scene scene = new Scene(grid, 240, 270);
+		primaryStage.setTitle("U10416027 計算機");
+		primaryStage.setScene(scene);
+		primaryStage.setResizable(false);
+		primaryStage.show();
+		
+  	}
 }
