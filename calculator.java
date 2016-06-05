@@ -19,6 +19,168 @@ import javafx.scene.control.MenuItem;
 
 public class calculator extends Application {
   public void start(Stage primaryStage) {
-  
+    // to save the number , and judge +  -  x  or  /
+    private double number;
+		private double judge;
+		
+		MenuBar menuBar = new MenuBar();
+        Menu menu = new Menu("編輯");
+		
+		//set the pane
+		GridPane grid = new GridPane();
+		grid.setHgap(10);
+		grid.setVgap(10);
+		grid.setPadding(new Insets(5, 5, 5, 5));
+
+    //TextFields
+		TextField output = new TextField();
+		output.setMinSize(233, 0);
+		GridPane.setConstraints(output, 0, 0);
+		grid.getChildren().add(output);
+		
+		
+		// set the button
+		Button b1 = new Button("Backspace");
+		Button b2 = new Button("CE");
+		Button b3 = new Button("C");
+		Button b4 = new Button("7");
+		Button b5 = new Button("8");
+		Button b6 = new Button("9");
+		Button b7 = new Button("4");
+		Button b8 = new Button("5");
+		Button b9 = new Button("6");
+		Button b10 = new Button("1");
+		Button b11 = new Button("2");
+		Button b12 = new Button("3");
+		Button b13 = new Button("0");
+		Button b14 = new Button("+/-");
+		Button b15 = new Button(".");
+		Button b16 = new Button("/");
+		Button b17 = new Button("sqrt");
+		Button b18 = new Button("X");
+		Button b19 = new Button("%");
+		Button b20 = new Button("-");
+		Button b21 = new Button("1/x");
+		Button b22 = new Button("+");
+		Button b23 = new Button("=");
+	
+	  // add buttons to pane
+		b1.setMinSize(80, 30);
+		b1.setTranslateX(10);
+		b1.setTranslateY(45);
+		grid.getChildren().add(b1);
+		
+		b2.setMinSize(60, 30);
+		b2.setTranslateX(95);
+		b2.setTranslateY(45);
+		grid.getChildren().add(b2);
+		
+		
+		b3.setMinSize(60, 30);
+		b3.setTranslateX(160);
+		b3.setTranslateY(45);
+		grid.getChildren().add(b3);
+		
+		
+		b4.setMinSize(35, 35);
+		b4.setTranslateX(10);
+		b4.setTranslateY(85);
+		grid.getChildren().add(b4);
+		
+		b5.setMinSize(35, 35);
+		b5.setTranslateX(50);
+		b5.setTranslateY(85);
+		grid.getChildren().add(b5);
+		
+		b6.setMinSize(35, 35);
+		b6.setTranslateX(90);
+		b6.setTranslateY(85);
+		grid.getChildren().add(b6);
+		
+		b7.setMinSize(35, 35);
+		b7.setTranslateX(10);
+		b7.setTranslateY(125);
+		grid.getChildren().add(b7);
+		
+		b8.setMinSize(35, 35);
+		b8.setTranslateX(50);
+		b8.setTranslateY(125);
+		grid.getChildren().add(b8);
+		
+		b9.setMinSize(35, 35);
+		b9.setTranslateX(90);
+		b9.setTranslateY(125);
+		grid.getChildren().add(b9);
+		
+		b10.setMinSize(35, 35);
+		b10.setTranslateX(10);
+		b10.setTranslateY(165);
+		grid.getChildren().add(b10);
+		
+		b11.setMinSize(35, 35);
+		b11.setTranslateX(50);
+		b11.setTranslateY(165);
+		grid.getChildren().add(b11);
+		
+		b12.setMinSize(35, 35);
+		b12.setTranslateX(90);
+		b12.setTranslateY(165);
+		grid.getChildren().add(b12);
+		
+		b13.setMinSize(35, 35);
+		b13.setTranslateX(10);
+		b13.setTranslateY(205);
+		grid.getChildren().add(b13);
+		
+		b14.setMinSize(35, 35);
+		b14.setTranslateX(50);
+		b14.setTranslateY(205);
+		grid.getChildren().add(b14);
+		
+		b15.setMinSize(30, 35);
+		b15.setTranslateX(95);
+		b15.setTranslateY(205);
+		grid.getChildren().add(b15);
+		
+		b16.setMinSize(45, 35);
+		b16.setTranslateX(130);
+		b16.setTranslateY(85);
+		grid.getChildren().add(b16);
+		
+		b17.setMinSize(45, 35);
+		b17.setTranslateX(180);
+		b17.setTranslateY(85);
+		grid.getChildren().add(b17);
+		
+		b18.setMinSize(45, 35);
+		b18.setTranslateX(130);
+		b18.setTranslateY(125);
+		grid.getChildren().add(b18);
+		
+		b19.setMinSize(45, 35);
+		b19.setTranslateX(180);
+		b19.setTranslateY(125);
+		grid.getChildren().add(b19);
+		
+		b20.setMinSize(45, 35);
+		b20.setTranslateX(130);
+		b20.setTranslateY(165);
+		grid.getChildren().add(b20);
+		
+		b21.setMinSize(45, 35);
+		b21.setTranslateX(180);
+		b21.setTranslateY(165);
+		grid.getChildren().add(b21);
+		
+		b22.setMinSize(45, 35);
+		b22.setTranslateX(130);
+		b22.setTranslateY(205);
+		grid.getChildren().add(b22);
+		
+		b23.setMinSize(45, 35);
+		b23.setTranslateX(180);
+		b23.setTranslateY(205);
+		grid.getChildren().add(b23);
+
   }
 }
