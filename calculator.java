@@ -183,6 +183,35 @@ public class calculator extends Application {
 		grid.getChildren().add(b23);
 
 		//create the action listener
+		
+		// "+""
+		b22.setOnAction(c -> {
+			number = Double.parseDouble(output.getText());
+			output.setText("");
+			judge = 1;
+		});
+		
+		// "-"
+		b20.setOnAction(c -> {
+			number = Double.parseDouble(output.getText());
+			output.setText("");
+			judge = 2;
+		});
+		
+		// "x"
+		b18.setOnAction(c -> {
+			number = Double.parseDouble(output.getText());
+			output.setText("");
+			judge = 3;
+		});
+		
+		// "/"
+		b16.setOnAction(c -> {
+			number = Double.parseDouble(output.getText());
+			output.setText("");
+			judge = 4;
+		});
+		
 		b4.setOnAction(e -> {
 			output.setText(output.getText()+"7");
 		});
