@@ -18,11 +18,11 @@ import javafx.scene.control.MenuBar;
 import javafx.scene.control.MenuItem;
 
 public class calculator extends Application {
+	// to save the number , and judge +  -  x  or  /
+    	private double number;
+	private double judge;
+	
 	public void start(Stage primaryStage) {
-    		// to save the number , and judge +  -  x  or  /
-    		private double number;
-		private double judge;
-		
 		MenuBar menuBar = new MenuBar();
         	Menu menu = new Menu("編輯");
 		
